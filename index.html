@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Play with Charge</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="js/charge.js"></script>
+        <script type="text/javascript">
+            window.onload = function reset() {
+                charge_one_obj = document.getElementById('charge_one');
+                charge_two_obj = document.getElementById('charge_two');
+                counter = 0;
+                CNT = 10;
+                ANIMATION_TIME = 600;
+                charge_one = null;
+                charge_two = null;
+
+                charge_one_obj.src = "images/charge_one_demo.png";
+                charge_one_obj.style.position = 'absolute';
+                charge_one_obj.style.left = '0px';
+
+                charge_two_obj.src = "images/charge_two_demo.png";
+                charge_two_obj.style.position = 'absolute';
+                charge_two_obj.style.left = '300px';
+            };
+        </script>
+        
+
+    </head>
+
+    <body>
+
+        <img id="charge_one" width="107" height="98">
+        <img id="charge_two" width="107" height="98">
+        <br/><br/><br/><br/><br/><br/>
+
+        <ol>
+            <li>First select charge one and charge two.</li>
+            <li>Then click run to see the result</li>
+            <li>To test another first click on reset button</li>
+        </ol> 
+
+        <table>
+            <tr>
+                <td><input type="button" onclick="run()" value="Run"></td>
+                <td><input type="button" onclick="reset()" value="Reset"></td>
+            <tr>
+            <tr>
+                <td><input type="button" onclick="changeSrcOne('positive')" value="Positive Charge"></td>
+                <td><input type="button" onclick="changeSrcTwo('positive')" value="Positive Charge"></td>
+            <tr>
+            <tr>
+                <td><input type="button" onclick="changeSrcOne('negative')" value="Negative Charge"></td>
+                <td><input type="button" onclick="changeSrcTwo('negative')" value="Negative Charge"></td>
+            <tr>
+        </table>
+
+    </body>
+</html>
